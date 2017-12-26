@@ -27,7 +27,7 @@ import { Settings } from '../providers/providers';
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = "LoginPage";
 
   @ViewChild(Nav) nav: Nav;
 
@@ -75,7 +75,7 @@ export class MyApp {
     } else {
       this.translate.use('en'); // Set your language here
     }
-
+    this.translate.use('zh-cmn-Hans');
     this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {
       this.config.set('ios', 'backButtonText', values.BACK_BUTTON_TEXT);
     });
